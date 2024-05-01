@@ -10,21 +10,25 @@ const Navbar = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1, height: "74px", width: "100vw" }}>
-        <AppBar sx={{ color: "" }}>
-          <Toolbar>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
-                height: "100%",
-              }}
-            >
-              <Logo />
-              <SearchBar />
-              <FeedbackButton />
-            </Box>
+        <AppBar
+          position="static"
+          sx={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Toolbar
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <Logo />
+            <SearchBar />
+            <FeedbackButton />
           </Toolbar>
         </AppBar>
       </Box>
