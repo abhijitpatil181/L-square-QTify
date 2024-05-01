@@ -8,7 +8,7 @@ const SearchBar = () => {
   return (
     <>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <InputField placeholder="Search a album of your choice" />
+        <InputField placeholder="Search a song of your choice" />
 
         <SearchIconButton>
           <SearchIcon />

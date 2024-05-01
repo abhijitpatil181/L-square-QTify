@@ -16,6 +16,7 @@ const FeedbackButton = () => {
           "&:hover": {
             backgroundColor: theme.palette.background.default,
           },
+          textTransform: "none",
         }}
       >
         Give Feedback
