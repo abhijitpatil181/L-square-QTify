@@ -1,6 +1,3 @@
-import { Typography } from "@mui/material";
-
-import { useTheme } from "@mui/material";
 import { HeroContainer } from "./HeroContent.styled";
 import { HeroCotentContainer } from "./HeroContent.styled";
 import { HeroContent } from "./HeroContent.styled";
