@@ -7,7 +7,7 @@ export const HeroContainer = styled(Box)(({ theme }) => ({
   height: "100px",
 }));
 
-export const HeroCotentContainer = styled(Box)(({ theme }) => ({
+export const HeroContentContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
 }));

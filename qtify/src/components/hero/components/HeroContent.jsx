@@ -1,17 +1,17 @@
 import { HeroContainer } from "./HeroContent.styled";
-import { HeroCotentContainer } from "./HeroContent.styled";
+import { HeroContentContainer } from "./HeroContent.styled";
 import { HeroContent } from "./HeroContent.styled";
 
 const HeroSectionContent = () => {
   return (
     <>
       <HeroContainer>
-        <HeroCotentContainer>
+        <HeroContentContainer>
           <HeroContent>100 Thousand Songs, ad-free</HeroContent>
-        </HeroCotentContainer>
-        <HeroCotentContainer>
+        </HeroContentContainer>
+        <HeroContentContainer>
           <HeroContent>Over thousands podcast episodes</HeroContent>
-        </HeroCotentContainer>
+        </HeroContentContainer>
       </HeroContainer>
     </>
   );
