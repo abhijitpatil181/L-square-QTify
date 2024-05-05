@@ -3,7 +3,7 @@ import CardComponent from "./components/CardComponent";
 import { useTheme } from "@emotion/react";
 import { useState } from "react";
 import Carousel from "../carousel/Carousel";
-import { CircularProgress } from "@mui/material";
+import { Tooltip } from "@mui/material";
 
 const Section = ({ title, data, type }) => {
   const [carousel, setCarousel] = useState(true);
@@ -12,6 +12,7 @@ const Section = ({ title, data, type }) => {
   const carouselHandler = () => {
     setCarousel((prevState) => !prevState);
   };
+  console.log("data", data);
 
   return (
     <>
@@ -35,13 +36,19 @@ const Section = ({ title, data, type }) => {
         ) : (
           <Grid container columnSpacing={2}>
             {data.map((ele) => (
-              <Grid item xs={12} sm={6} md={4} lg={1.7} key={ele.id}>
-                <CardComponent
-                  title={ele.title}
-                  img={ele.image}
-                  followers={ele.follows}
-                />
-              </Grid>
+              <Tooltip
+                title={`${ele.songs.length} songs`}
+                placement="top-start"
+                arrow
+              >
+                <Grid item xs={12} sm={6} md={4} lg={1.7} key={ele.id}>
+                  <CardComponent
+                    title={ele.title}
+                    img={ele.image}
+                    followers={ele.follows}
+                  />
+                </Grid>
+              </Tooltip>
             ))}
           </Grid>
         )}

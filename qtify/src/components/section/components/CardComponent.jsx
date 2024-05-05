@@ -12,6 +12,7 @@ const CardComponent = ({ title, img, followers }) => {
   const theme = useTheme();
   return (
     <>
+    
       <Card sx={{ width: "159px", height: "205px", borderRadius: "10px" }}>
         <CardActionArea>
           <CardMedia component="img" height="170px" image={img} alt={title} />

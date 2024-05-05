@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Tooltip } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Carousel = ({ data }) => {
   return (
@@ -17,13 +19,20 @@ const Carousel = ({ data }) => {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {data.map((ele) => (
-          <SwiperSlide>
-            <CardComponent
-              key={ele.id}
-              title={ele.title}
-              img={ele.image}
-              followers={ele.follows}
-            />
+          <SwiperSlide key={ele.id}>
+            <Tooltip
+              title={`${ele.songs.length} songs`}
+              placement="top-start"
+              arrow
+            >
+              <Box>
+                <CardComponent
+                  title={ele.title}
+                  img={ele.image}
+                  followers={ele.follows}
+                />
+              </Box>
+            </Tooltip>
           </SwiperSlide>
         ))}
       </Swiper>
