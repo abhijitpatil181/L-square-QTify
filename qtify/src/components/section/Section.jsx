@@ -36,19 +36,21 @@ const Section = ({ title, data, type }) => {
         ) : (
           <Grid container columnSpacing={2}>
             {data.map((ele) => (
-              <Tooltip
-                title={`${ele.songs.length} songs`}
-                placement="top-start"
-                arrow
-              >
-                <Grid item xs={12} sm={6} md={4} lg={1.7} key={ele.id}>
-                  <CardComponent
-                    title={ele.title}
-                    img={ele.image}
-                    followers={ele.follows}
-                  />
-                </Grid>
-              </Tooltip>
+              <Grid item xs={12} sm={6} md={4} lg={1.7} key={ele.id}>
+                <Tooltip
+                  title={`${ele.songs.length} songs`}
+                  placement="top-start"
+                  arrow
+                >
+                  <Box>
+                    <CardComponent
+                      title={ele.title}
+                      img={ele.image}
+                      followers={ele.follows}
+                    />
+                  </Box>
+                </Tooltip>
+              </Grid>
             ))}
           </Grid>
         )}
