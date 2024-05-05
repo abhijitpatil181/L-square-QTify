@@ -12,7 +12,9 @@ const HomePage = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ backgroundColor: theme.palette.background.default }}>
+    <Box
+      sx={{ backgroundColor: theme.palette.background.default, width: "100vw" }}
+    >
       <HeroSection />
       <Box
         sx={{

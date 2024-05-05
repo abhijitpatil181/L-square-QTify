@@ -26,8 +26,7 @@ const CardComponent = ({ title, img, followers }) => {
               sx={{
                 borderRadius: "10px",
                 height: "23px",
-                marginLeft: "6px",
-                marginTop: "6px",
+                margin: "6px",
                 padding: "4px 8px 4px 8px",
                 fontSize: "10px",
                 fontWeight: "400",

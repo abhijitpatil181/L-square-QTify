@@ -3,7 +3,6 @@ import { Router } from "./router";
 import { BrowserRouter } from "react-router-dom";
 import theme from "./themes";
 import { ThemeProvider } from "@mui/material";
-
 function App() {
   return (
     <>
