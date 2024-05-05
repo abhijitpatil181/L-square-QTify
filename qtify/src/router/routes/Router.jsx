@@ -1,14 +1,17 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import { HomePage } from "../../pages";
+import { Layout } from "../../layouts";
 
-const defaultNavigate = <Navigate to="/homepage" replace />;
+const defaultNavigate = <Navigate to="/" replace />;
 
 const Router = () => {
   return (
     <>
       <Routes>
         <Route path="*" element={defaultNavigate} />
-        <Route path="homepage" element={<HomePage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+        </Route>
       </Routes>
     </>
   );
